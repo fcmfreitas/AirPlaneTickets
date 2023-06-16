@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//NEYMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
 public class Plane{
     public static void print(boolean [][] seats){
         System.out.println("      A     B     C     D");
