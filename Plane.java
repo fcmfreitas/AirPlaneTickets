@@ -22,10 +22,6 @@ public class Plane{
         System.out.println("Venda de passagens aereas:");
         print(seats);
 
-        // System.out.println(java.util.Arrays.toString(seats[0]));
-        // System.out.println(java.util.Arrays.toString(seats[1])); ver matriz
-        // System.out.println(java.util.Arrays.toString(seats[2]));
-        // System.out.println(java.util.Arrays.toString(seats[3]));
         boolean i = false;
         while(i == false){
 
@@ -49,7 +45,7 @@ public class Plane{
                     case 'b':    
                         column = 1;
                         break;
-                    case 'C':           // if else alternativo
+                    case 'C':           
                     case 'c':    
                         column = 2;
                         break;
