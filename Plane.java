@@ -1,5 +1,7 @@
 import java.util.Scanner;
-//NEYMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
+import java.io.FileInputStream;
+
+
 public class Plane{
     public static void print(boolean [][] seats){
         System.out.println("      A     B     C     D");
@@ -15,16 +17,16 @@ public class Plane{
             System.out.printf(" %2d%n", i + 1);
         }
     }
-    public static void main(String[] args){
+    public Plane(String flight){
         Scanner in = new Scanner(System.in);
         boolean [][] seats; //vendido -- nao vendido
         seats = new boolean [33] [4];
-        System.out.println("Venda de passagens aereas:");
+        System.out.println("Venda de passagens aereas para "+ flight +" :");
         print(seats);
 
         boolean i = false;
         while(i == false){
-
+            
             String choice = in.next();
             System.out.println(choice);
 
