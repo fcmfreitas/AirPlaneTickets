@@ -14,7 +14,7 @@ public class Plane{
                     System.out.print("[ ]");
                 };
             }
-            System.out.printf(" %2d%n", i + 1);
+            System.out.printf(" %2d%n", i + 1); //asdawsdsdewejrmo
         }
     }
     public Plane(String flight){
