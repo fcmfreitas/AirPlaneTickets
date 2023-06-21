@@ -6,7 +6,7 @@ public class AirPlane{
     public AirPlane(String destiny){
         this.city = destiny;
         this.seats = new boolean[10][4];
-        
+        System.out.println("Seu destino eh "+ this.city);
     }
     public void sell(String ticket){
         char letter = ticket.charAt(0);
