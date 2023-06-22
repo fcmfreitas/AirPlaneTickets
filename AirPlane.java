@@ -54,7 +54,7 @@ public class AirPlane{
             }
             System.out.printf(" %2d%n", i + 1);
         }
-    }
+        }
     public void save() throws Exception{
         String filename = this.city.replace(" ", "");
         PrintStream file = new PrintStream(filename+".txt");

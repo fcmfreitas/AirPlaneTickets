@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Buyer{
     private String name;
     private String cpf;
