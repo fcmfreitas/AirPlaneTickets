@@ -18,12 +18,7 @@ public class AirPlane{
         int column;
         int line;
         
-        System.out.println("Quantos acentos deseja comprar? ");  //TENTEI FAZER O FOR PARA AUMENTAR A COMPRA DE INGRESSOS
-        Scanner sc = new Scanner(System.in); //EU QUE FIZ
-        int quantidade = sc.nextInt(); //EU QUE FIZ
-        // FOR EU QUE FIZ
         
-        for(int i = 1; i <= quantidade; i++){
         if(letter == 'a'|| letter == 'A'){
             column = 0;            
         } else if(letter == 'b'|| letter == 'B'){
@@ -42,7 +37,6 @@ public class AirPlane{
         } else{
             this.seats[line][column] = true;
         }
-    }
 }
     public void save() throws Exception{
         String filename = this.city.replace(" ", "");

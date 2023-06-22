@@ -25,7 +25,7 @@ public class Sell{
             city = "São Paulo";
         } else if(destiny.equals("3")||destiny.equals("[3]")){
             city = "Salvador";
-        }
+        } 
         AirPlane flight = new AirPlane(city);
         System.out.println("Seu destino é "+ city);
         
