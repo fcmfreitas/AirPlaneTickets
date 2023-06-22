@@ -49,23 +49,40 @@ public class SellApp{
 
         AirPlane flight = new AirPlane(city);
         String filename = city.replace(" ", "") + ".txt";
-        
+
         File file = new File(filename);
 
         if (file.exists()) {
             flight.read();
         }
-        
+
         System.out.println("Seu destino é "+ city +". Quantos assentos gostaria de comprar?");
         int quant = sc.nextInt();
+        boolean desconto = false;
 
-        flight.print();
-
-        for(int i = 1; i <= quant; i++){
-            flight.sell(sc.next());
+        if(quant > 4)
+        {
+            desconto = true;
         }
 
         flight.print();
+        double price = 0;
+
+        for (int i = 1; i <= quant; i++) {
+            String seat = sc.next();
+            if (flight.sell(seat)) {
+                price = price + flight.price();
+            } else {
+                i--; 
+            }
+        }
+
+        if (desconto == true) {
+            price = price - (price * 10 / 100);
+        }
+
+        flight.print();
+        System.out.printf("VALOR A PAGAR: R$ %.2f\n", price);
 
         flight.save();
 

@@ -5,13 +5,25 @@ import java.io.FileInputStream;
 public class AirPlane{
     private boolean seats[][];
     private String city;
+    private double price;
 
     public AirPlane(String destiny){
         this.city = destiny;
         this.seats = new boolean[10][4];
     }
 
-    public void sell(String ticket){
+    public double price(){
+        if(this.city.equals("Salvador")){
+            this.price = 3100.00;
+        }else if(this.city.equals("Rio de Janeiro")){
+            this.price = 1999.99;
+        }else if(this.city.equals("São Paulo")){
+            this.price = 1750.50;
+        }
+        return this.price;
+    }
+
+    public boolean  sell(String ticket){
         System.out.println("");
         char letter = ticket.charAt(0);
         int number = Integer.parseInt(ticket.substring(1));
@@ -32,11 +44,12 @@ public class AirPlane{
         }
 
         line = number - 1;
-        if(this.seats [line][column] == true){
+        if (this.seats[line][column] == true) {
             System.out.println("O assento escolhido está ocupado, tente novamente mais tarde");
-
-        } else{
+            return false;
+        } else {
             this.seats[line][column] = true;
+            return true;
         }
 
     }
