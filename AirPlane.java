@@ -33,7 +33,7 @@ public class AirPlane{
         
         line = number - 1;
         if(this.seats [line][column] == true){
-            System.out.println("occupied");
+            System.out.println("ocupado");
         } else{
             this.seats[line][column] = true;
         }
