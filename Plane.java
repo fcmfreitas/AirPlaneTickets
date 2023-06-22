@@ -1,29 +1,22 @@
 import java.util.Scanner;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.Arrays;
 
 
 public class Plane{
-    public static void print(boolean [][] seats){
-        System.out.println("      A     B     C     D");
-        for(int i = 0; i < seats.length; i++){
-            System.out.printf("%2d ", i + 1);
-            for(int j = 0; j < seats[i].length; j++){
-                if(seats[i][j] == true){
-                    System.out.print("[X]");
-                }else{
-                    System.out.print("[ ]");
-                };
-            }
-            System.out.printf(" %2d%n", i + 1);
-        }
-    }
-    public Plane(String flight){
+    private String city = "RJ";
+    
+    public Plane(String flight)throws Exception{
+        String city = this.city;
+        FileOutputStream file = new FileOutputStream(city +".txt");
+        
         Scanner in = new Scanner(System.in);
         boolean [][] seats; //vendido -- nao vendido
         seats = new boolean [33] [4];
-        System.out.println("Venda de passagens aereas para "+ flight +" :");
+        System.out.println("Venda de passagens aereas para "+ flight +":");
         print(seats);
-
+        
         boolean i = false;
         while(i == false){
             
@@ -68,6 +61,20 @@ public class Plane{
                 print(seats);
             }
         }
-
+        
+    }
+    public void print(boolean [][] seats) throws Exception{
+        System.out.println("      A     B     C     D");
+        for(int i = 0; i < seats.length; i++){
+            System.out.printf("%2d ", i + 1);
+            for(int j = 0; j < seats[i].length; j++){
+                if(seats[i][j] == true){
+                    System.out.print("[X]");
+                }else{
+                    System.out.print("[ ]");
+                };
+            }
+            System.out.printf(" %2d%n", i + 1);
+        }
     }
 }
