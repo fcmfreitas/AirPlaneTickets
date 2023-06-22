@@ -21,6 +21,8 @@ public class Sell{
         AirPlane flight = new AirPlane(city);
         System.out.println("Seu destino é "+ city);
         
-        //flight.save();
+        
+        
+        flight.save();
     }
 }
