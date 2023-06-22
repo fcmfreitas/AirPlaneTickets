@@ -40,7 +40,7 @@ public class AirPlane{
 
     }
     public void print(){
-        System.out.println("      A     B     C     D");
+        System.out.println("    A  B  C  D");
         for(int i = 0; i < seats.length; i++){
             System.out.printf("%2d ", i + 1);
             for(int j = 0; j < seats[i].length; j++){
