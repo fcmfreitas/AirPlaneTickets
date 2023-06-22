@@ -32,7 +32,6 @@ public class Buyer{
             }
         }
         
-        
         this.name = name;
         this.cpf = cpf;
     }

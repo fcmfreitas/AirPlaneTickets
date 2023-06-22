@@ -1,3 +1,7 @@
+import java.util.Scanner;
+import java.io.PrintStream;
+import java.io.FileInputStream;
+
 public class AirPlane{
     private boolean seats[][];
     private String city;
@@ -6,9 +10,9 @@ public class AirPlane{
     public AirPlane(String destiny){
         this.city = destiny;
         this.seats = new boolean[10][4];
-        System.out.println("Seu destino eh "+ this.city);
     }
     public void sell(String ticket){
+        System.out.println("");
         char letter = ticket.charAt(0);
         int number = Integer.parseInt(ticket.substring(1));
         
