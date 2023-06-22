@@ -7,7 +7,7 @@ import java.io.File;
  * Francisco Castro Menezes de Freitas | Matricula 23103208
  *
  */
-public class Sell{
+public class SellApp{
     public static void main(String[] args) throws Exception{
         System.out.print("Bem vindos a compra de passagens aereas! Seu voo parte hoje dia: ");
         Date dataCompraAtual = new Date();
