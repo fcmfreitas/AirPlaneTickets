@@ -2,11 +2,19 @@ import java.util.Scanner;
 
 public class Sell{
     public static void main(String[] args) throws Exception{
+        System.out.print("Bem vindos a compra de passagens aereas! Hoje eh dia: ");
         Date dataCompraAtual = new Date();
         
+       
+        System.out.println("Para realizar sua compra primeiramente precisamos fazer um cadastro.");
+        
+    
+
         Scanner sc = new Scanner(System.in);
             
         Buyer person1 = new Buyer();
+        
+        
         
         System.out.println("Esclha para onde quer ir:\nDigite [1] para Rio de Janeiro\nDigite [2] para São Paulo\nDigite [3] para Salvador");
         String city = "";
@@ -20,6 +28,8 @@ public class Sell{
         }
         AirPlane flight = new AirPlane(city);
         System.out.println("Seu destino é "+ city);
+        
+        
         
         //flight.save();
     }
