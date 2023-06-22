@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------
 Our project is about simulating an airplane ticket sale, in which the user 
 must choose one out of three destinations, and the options are: the cities 
-of Rio de Janeiro, São Paulo and Salvador. The user must got through the 
+of Rio de Janeiro, São Paulo and Salvador. The user must go through the 
 first step, that consists in inserting his full name and CPF.
 --------------------------------------------------------------------------
 
