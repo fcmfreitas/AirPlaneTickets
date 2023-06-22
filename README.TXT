@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------
 Nosso projeto trata-se de um simulador de venda de passagens aéreas,
-em que o comprador pode escolher entre voar para o Rio de Janeiro, São
+em que o comprador deve escolher entre voar para o Rio de Janeiro, São
 Paulo ou Salvador. Durante as etapas iniciais, o usuário deve inserir
 seu nome completo e CPF.
 ------------------------------------------------------------------------
