@@ -1,9 +1,8 @@
 ------------------------------------------------------------------------
 Our project is about simulating an airplane ticket sale, in which the
-user must choose his destination. There are three options available: the 
-city of Rio de Janeiro, São Paulo and Salvador. In order to go through 
-the first steps, the user must insert his full name and CPF. After that, 
-it is possible to choose the amount of seats you want to buy.
+user must choose one out of three destinations, in which the options are: 
+the cities of Rio de Janeiro, São Paulo and Salvador. The user must go
+through the first steps, that consist in inserting his full name and CPF.
 ------------------------------------------------------------------------
 
 PROJECT TITLE: Java AirPlaneTicketsSell
