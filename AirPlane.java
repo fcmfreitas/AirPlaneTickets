@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 public class AirPlane{
     private boolean seats[][];
     private String city;
+    private boolean ocupado;
 
     public AirPlane(String destiny){
         this.city = destiny;
@@ -33,7 +34,8 @@ public class AirPlane{
 
         line = number - 1;
         if(this.seats [line][column] == true){
-            System.out.println("ocupado");
+            System.out.println("O assento escolhido está ocupado, tente novamente mais tarde");
+
         } else{
             this.seats[line][column] = true;
         }

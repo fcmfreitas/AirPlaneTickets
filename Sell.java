@@ -39,6 +39,7 @@ public class Sell{
         
         for(int i = 1; i <= quant; i++){
             flight.sell(sc.next());
+            flight.print();
         }
         
         flight.print();
