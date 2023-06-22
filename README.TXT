@@ -1,7 +1,8 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
+Nosso projeto trata-se de um simulador de venda de passagens aéreas,
+em que o comprador pode escolher entre voar para o Rio de Janeiro, São
+Paulo ou Salvador. Durante as etapas iniciais, o usuário deve inserir
+seu nome completo e CPF.
 ------------------------------------------------------------------------
 
 PROJECT TITLE: Java AirPlaneTicketsSell
