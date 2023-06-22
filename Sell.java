@@ -19,6 +19,8 @@ public class Sell{
             city = "Salvador";
         }
         AirPlane flight = new AirPlane(city);
-        System.out.print("Seu destino é "+ city);
+        System.out.println("Seu destino é "+ city);
+        
+        //flight.save();
     }
 }

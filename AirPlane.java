@@ -6,7 +6,6 @@ public class AirPlane{
     private boolean seats[][];
     private String city;
     
-    
     public AirPlane(String destiny){
         this.city = destiny;
         this.seats = new boolean[10][4];
@@ -38,7 +37,17 @@ public class AirPlane{
             this.seats[line][column] = true;
         }
     }
-    public void print(){
+    
+    public void save() throws Exception{
+        String filename = this.city.replace(" ", "");
+        PrintStream file = new PrintStream(filename+".txt");
         
+        for (int i = 0; i < this.seats.length; i++) {
+            for (int j = 0; j < this.seats[i].length; j++) {            
+                    file.print(this.seats[i][j]+" ");
+            }
+            file.println();
+        }
+        file.close();
     }
-    }
+}
