@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Sell{
     public static void main(String[] args) throws Exception{
+        Date dataCompraAtual = new Date();
+        
         Scanner sc = new Scanner(System.in);
             
         Buyer person1 = new Buyer();
