@@ -33,12 +33,14 @@ public class AirPlane{
 
         line = number - 1;
         if(this.seats [line][column] == true){
-            System.out.println("ocupado");
+            System.out.println("O assento escolhido está ocupado, tente novamente mais tarde");
+
         } else{
             this.seats[line][column] = true;
         }
 
     }
+
     public void print(){
         System.out.println("    A  B  C  D");
         for(int i = 0; i < seats.length; i++){
@@ -52,7 +54,8 @@ public class AirPlane{
             }
             System.out.printf(" %2d%n", i + 1);
         }
-        }
+    }
+
     public void save() throws Exception{
         String filename = this.city.replace(" ", "");
         PrintStream file = new PrintStream(filename+".txt");
@@ -65,17 +68,20 @@ public class AirPlane{
         }
         file.close();
     }
+
     public void read() throws Exception {
         String filename = this.city.replace(" ", "");
         FileInputStream file = new FileInputStream(filename+".txt");
-        
+
         Scanner sc = new Scanner(file);
+
         for (int i = 0; i < this.seats.length; i++) {
             for (int j = 0; j < this.seats[i].length; j++) {            
-                    this.seats[i][j] = sc.nextBoolean();
+                this.seats[i][j] = sc.nextBoolean();
             }
         }
+
         sc.close();
-        file.close();            
+        file.close();
     }
 }

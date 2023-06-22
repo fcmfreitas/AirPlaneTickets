@@ -1,11 +1,13 @@
 import java.util.Scanner;
+import java.io.File;
+
 /**
  * Fernando Flores Cabral Neto | Matricula 23102305
  * Leonardo Chiao Andreucci | Matricula 
  * Francisco Castro Menezes de Freitas | Matricula 23103208
  *
  */
-public class SellApp{
+public class Sell{
     public static void main(String[] args) throws Exception{
         System.out.print("Bem vindos a compra de passagens aereas! Seu voo parte hoje dia: ");
         Date dataCompraAtual = new Date();
@@ -21,7 +23,7 @@ public class SellApp{
         String destiny = sc.next();
 
         if(destiny.equals("1")||destiny.equals("[1]")){
-            city = "Rio de Janeito";
+            city = "Rio de Janeiro";
         } else if(destiny.equals("2")||destiny.equals("[2]")){
             city = "São Paulo";
         } else if(destiny.equals("3")||destiny.equals("[3]")){
@@ -46,7 +48,13 @@ public class SellApp{
         }
 
         AirPlane flight = new AirPlane(city);
-        flight.read();
+        String filename = city.replace(" ", "") + ".txt";
+        
+        File file = new File(filename);
+
+        if (file.exists()) {
+            flight.read();
+        }
         
         System.out.println("Seu destino é "+ city +". Quantos assentos gostaria de comprar?");
         int quant = sc.nextInt();
