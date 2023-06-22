@@ -65,4 +65,17 @@ public class AirPlane{
         }
         file.close();
     }
+    public void read() throws Exception {
+        String filename = this.city.replace(" ", "");
+        FileInputStream file = new FileInputStream(filename+".txt");
+        
+        Scanner sc = new Scanner(file);
+        for (int i = 0; i < this.seats.length; i++) {
+            for (int j = 0; j < this.seats[i].length; j++) {            
+                    this.seats[i][j] = sc.nextBoolean();
+            }
+        }
+        sc.close();
+        file.close();            
+    }
 }

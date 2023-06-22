@@ -2,10 +2,10 @@ import java.util.Scanner;
 /**
  * Fernando Flores Cabral Neto | Matricula 23102305
  * Leonardo Chiao Andreucci | Matricula 
- * Francisco Castro Menezes de Freitas | Matricula 
+ * Francisco Castro Menezes de Freitas | Matricula 23103208
  *
  */
-public class Sell{
+public class SellApp{
     public static void main(String[] args) throws Exception{
         System.out.print("Bem vindos a compra de passagens aereas! Seu voo parte hoje dia: ");
         Date dataCompraAtual = new Date();
@@ -46,6 +46,8 @@ public class Sell{
         }
 
         AirPlane flight = new AirPlane(city);
+        flight.read();
+        
         System.out.println("Seu destino é "+ city +". Quantos assentos gostaria de comprar?");
         int quant = sc.nextInt();
 
