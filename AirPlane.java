@@ -1,7 +1,12 @@
 import java.util.Scanner;
 import java.io.PrintStream;
 import java.io.FileInputStream;
-
+/**
+ * Fernando Flores Cabral Neto | Matricula 23102305
+ * Leonardo Chiao Andreucci | Matricula 23102474
+ * Francisco Castro Menezes de Freitas | Matricula 23103208
+ * 
+ */
 public class AirPlane{
     private boolean seats[][];
     private String city;
@@ -23,7 +28,7 @@ public class AirPlane{
         return this.price;
     }
 
-    public boolean  sell(String ticket){
+    public boolean sell(String ticket){
         System.out.println("");
         char letter = ticket.charAt(0);
         int number = Integer.parseInt(ticket.substring(1));
@@ -99,6 +104,10 @@ public class AirPlane{
     }
     
     public void clear(){
-        
+        for(int i = 0; i <= 9; i++){
+            for(int j = 0; j <= 3; j++){
+                this.seats[i][j] = false;
+            }
+        }
     }
 }

@@ -1,5 +1,11 @@
 import java.time.LocalDate;
+
 /**
+ * 
+ * Fernando Flores Cabral Neto | Matricula 23102305
+ * Leonardo Chiao Andreucci | Matricula 23102474
+ * Francisco Castro Menezes de Freitas | Matricula 23103208
+ *
  * Mostra a data em que a compra foi feita e consequentemente a data do voo. 
  * @param buyDate usa o Metodo LocalDate, para pegar o dia (sem horario) em que o voo parte. Porem no formato da lingua inglesa(YYYY/MM/DD).
  * foi necessario importar o pacote java.time e usar o a funcao .now() que ultiliza como base o computador em que o programa esta sendo rodado.

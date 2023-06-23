@@ -16,7 +16,14 @@ public class SellApp{
 
         Scanner sc = new Scanner(System.in);
         Buyer person1 = new Buyer();
-
+        
+        if(person1.Buyer() == false){
+            System.out.println("\nDigite [exit] para sair:");
+            if(sc.next().equals("exit")){
+                System.exit(0);    
+            }
+        }
+        
         System.out.println("Esclha para onde quer ir:\nDigite [1] para Rio de Janeiro\nDigite [2] para São Paulo\nDigite [3] para Salvador");
         String city = "";
 
@@ -29,6 +36,7 @@ public class SellApp{
         } else if(destiny.equals("3")||destiny.equals("[3]")){
             city = "Salvador";
         } 
+        
         boolean pass = true;
 
         while(pass == true){
@@ -56,7 +64,7 @@ public class SellApp{
             flight.read();
         }
 
-        System.out.println("Seu destino é "+ city +". Quantos assentos gostaria de comprar?");
+        System.out.println("Seu destino é "+ city +". Quantos assentos gostaria de comprar?\n*Na compra de 5 ou mais passagens você ganha 10% de desconto*");
         int quant = sc.nextInt();
         boolean desconto = false;
 
@@ -82,9 +90,15 @@ public class SellApp{
         }
 
         flight.print();
-        System.out.printf("VALOR A PAGAR: R$ %.2f\n", price);
-
+        System.out.printf("\nVALOR A PAGAR: R$ %.2f\n", price);
+        System.out.println("\nPara finalizar sua compra nesse voo digite [exit]:");
+        String secret = sc.next(); 
+        
+        if(secret.equals("talvez")){
+            flight.clear();
+        }
+        
         flight.save();
-
+        person1.save();
     }
 }
