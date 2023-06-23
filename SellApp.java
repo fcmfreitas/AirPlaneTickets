@@ -18,8 +18,9 @@ import java.io.File;
 public class SellApp{
     public static void main(String[] args) throws Exception{
         System.out.print("Bem vindos a compra de passagens aereas! Seu voo parte hoje dia: ");
-        Date dataCompraAtual = new Date();
-
+        Date atualDate = new Date();
+        //mostra na tela a data atual formatada em pt-br
+        
         System.out.println("Para realizar sua compra primeiramente precisamos fazer um cadastro.");
 
         Scanner sc = new Scanner(System.in);
@@ -31,6 +32,7 @@ public class SellApp{
                 System.exit(0);    
             }
         }
+        //verifica se a pessoa comprando já tem cadastro
         
         System.out.println("Esclha para onde quer ir:\nDigite [1] para Rio de Janeiro\nDigite [2] para São Paulo\nDigite [3] para Salvador");
         String city = "";
@@ -44,7 +46,7 @@ public class SellApp{
         } else if(destiny.equals("3")||destiny.equals("[3]")){
             city = "Salvador";
         } 
-        
+        //mostra as opçoes de voo disponiveis
         boolean pass = true;
 
         while(pass == true){
@@ -62,25 +64,28 @@ public class SellApp{
                 sc.next();
             }
         }
+        //verifica se o usuário escolheu um destino válido
 
         AirPlane flight = new AirPlane(city);
         String filename = city.replace(" ", "") + ".txt";
 
         File file = new File(filename);
-
+        
         if (file.exists()) {
             flight.read();
         }
+        //verifica se o arquivo com o nome destino do voo ja existe
 
         System.out.println("Seu destino é "+ city +". Quantos assentos gostaria de comprar?\n*Na compra de 5 ou mais passagens você ganha 10% de desconto*");
         int quant = sc.nextInt();
-        boolean desconto = false;
+        boolean discount = false;
 
         if(quant > 4)
         {
-            desconto = true;
+            discount = true;
         }
-
+        //verifica se o desconto de 5 ou mais vendas está ativo
+        
         flight.print();
         double price = 0;
 
@@ -93,8 +98,8 @@ public class SellApp{
             }
         }
 
-        if (desconto == true) {
-            price = price - (price * 10 / 100);
+        if (discount == true) {
+            price = price - (price * 10 / 100); //aplica do desconto de 10%
         }
 
         flight.print();
@@ -103,7 +108,7 @@ public class SellApp{
         String secret = sc.next(); 
         
         if(secret.equals("talvez")){
-            flight.clear();
+            flight.clear(); //comando secreto "talvez" para limpar o arquivo do disco com o nome do voo
         }
         
         flight.save();
