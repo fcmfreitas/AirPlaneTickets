@@ -11,3 +11,11 @@ VERSION or DATE: 2023-06-22
 HOW TO START THIS PROJECT: execute SellApp.java
 AUTHORS: @fcmfreitas @netozgn @dogfromchina
 USER INSTRUCTIONS: just execute SellApp.java
+--------------------------------------------------------------------------
+Fontes:
+Material fornecido e disponibilizado pelo professor.
+Livro: Conceitos de Computação com Java, Horstsmann.
+Canal Carlos Henrique Java no Youtube.
+https://www.guj.com.br/
+https://www.alura.com.br/
+https://www.devmedia.com.br/

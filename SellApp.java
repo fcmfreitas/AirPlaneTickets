@@ -6,7 +6,15 @@ import java.io.File;
  * Leonardo Chiao Andreucci | Matricula 23102474
  * Francisco Castro Menezes de Freitas | Matricula 23103208
  * 
- */
+ *
+/**
+ * Classe SellApp representa um aplicativo para venda de passagens aéreas.
+ *
+ *
+ * Método principal do aplicativo SellApp.
+ * @param args argumentos de linha de comando.
+ * @throws Exception se ocorrer um erro durante a execução do programa.
+*/
 public class SellApp{
     public static void main(String[] args) throws Exception{
         System.out.print("Bem vindos a compra de passagens aereas! Seu voo parte hoje dia: ");

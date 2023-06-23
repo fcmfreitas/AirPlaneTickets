@@ -7,12 +7,16 @@ import java.io.FileInputStream;
  * Fernando Flores Cabral Neto | Matricula 23102305
  * Leonardo Chiao Andreucci | Matricula 23102474
  * Francisco Castro Menezes de Freitas | Matricula 23103208
- *
+ * Classe Buyer representa um comprador de passagens aéreas.
  */
 public class Buyer{
     private String name;
     private String cpf;
     private String p_destiny;
+    /**
+     * Realiza o cadastro do comprador.
+     * @return true se o cadastro foi concluído com sucesso, false se o comprador já possui cadastro.
+     */
     public boolean Buyer(){
         Scanner sc = new Scanner(System.in);
 

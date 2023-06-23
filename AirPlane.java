@@ -6,17 +6,26 @@ import java.io.FileInputStream;
  * Leonardo Chiao Andreucci | Matricula 23102474
  * Francisco Castro Menezes de Freitas | Matricula 23103208
  * 
+ *
+ *
+ * Classe AirPlane representa um avião com assentos para venda de passagens.
  */
 public class AirPlane{
     private boolean seats[][];
     private String city;
     private double price;
-
+    /**
+     * Construtor da classe AirPlane.
+     * @param destination o destino do avião.
+     */
     public AirPlane(String destiny){
         this.city = destiny;
         this.seats = new boolean[10][4];
     }
-
+    /**
+     * Retorna o preço da passagem com base no destino do avião.
+     * @return o preço da passagem.
+     */
     public double price(){
         if(this.city.equals("Salvador")){
             this.price = 3100.00;
@@ -27,7 +36,11 @@ public class AirPlane{
         }
         return this.price;
     }
-
+    /**
+     * Vende um assento no avião.
+     * @param ticket a representação do assento a ser vendido (exemplo: A1, B2, C3, D4).
+     * @return true se o assento foi vendido com sucesso, false se o assento já está ocupado.
+     */
 
     public boolean sell(String ticket){
 
@@ -62,7 +75,9 @@ public class AirPlane{
         }
 
     }
-
+    /**
+     * Imprime a disposição dos assentos no avião.
+     */
     public void print(){
         System.out.println("    A  B  C  D");
         for(int i = 0; i < seats.length; i++){
@@ -77,7 +92,10 @@ public class AirPlane{
             System.out.printf(" %2d%n", i + 1);
         }
     }
-
+     /**
+     * Salva o estado dos assentos do avião em um arquivo.
+     * @throws Exception se ocorrer um erro ao salvar o arquivo.
+     */
     public void save() throws Exception{
         String filename = this.city.replace(" ", "");
         PrintStream file = new PrintStream(filename+".txt");
@@ -90,7 +108,10 @@ public class AirPlane{
         }
         file.close();
     }
-
+    /**
+     * Lê o estado dos assentos do avião de um arquivo.
+     * @throws Exception se ocorrer um erro ao ler o arquivo.
+     */
     public void read() throws Exception {
         String filename = this.city.replace(" ", "");
         FileInputStream file = new FileInputStream(filename+".txt");
@@ -106,7 +127,9 @@ public class AirPlane{
         sc.close();
         file.close();
     }
-    
+    /**
+     * Limpa o estado dos assentos do avião, marcando todos como desocupados.
+     */
     public void clear(){
         for(int i = 0; i <= 9; i++){
             for(int j = 0; j <= 3; j++){
