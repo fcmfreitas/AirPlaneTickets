@@ -28,7 +28,9 @@ public class AirPlane{
         return this.price;
     }
 
+
     public boolean sell(String ticket){
+
         System.out.println("");
         char letter = ticket.charAt(0);
         int number = Integer.parseInt(ticket.substring(1));
@@ -50,7 +52,9 @@ public class AirPlane{
 
         line = number - 1;
         if (this.seats[line][column] == true) {
+
             System.out.println("O assento escolhido está ocupado, escolha outro lugar:");
+
             return false;
         } else {
             this.seats[line][column] = true;

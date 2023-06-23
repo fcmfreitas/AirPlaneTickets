@@ -41,6 +41,7 @@ public class AirPlaneTest
     }
 
     @Test
+
     public void testPriceSV()
     {
         AirPlane airPlane4 = new AirPlane("Salvador");
@@ -69,3 +70,4 @@ public class AirPlaneTest
         airPlane1.sell("a2");
     }
 }
+
